@@ -14,8 +14,7 @@ function get_href($data)
 {
     return $data->getAttribute('href');
 }
-function data()
-{
+
     $link='https://fr.images.search.yahoo.com/search/images;_ylt=AwrJS5dMFghcBh4AgWpjAQx.;_ylu=X3oDMTE0aDRlcHI2BGNvbG8DaXIyBHBvcwMxBHZ0aWQDQjY1NjlfMQRzZWMDcGl2cw--?p='.urlencode('messi').'&fr2=piv-web&fr=yfp-t-905-s';
 $html=file_get_contents($link);
 
@@ -43,7 +42,7 @@ $dom1->preserveWhiteSpace = false;
 $images1 = $dom1->getElementsByTagName('a');
 print_r($images1);
 foreach ($images1 as $image) {
-$imgs1[] = $image->getAttribute('href');//atribut qui sort l'image 
+$imgs1[] = $image->getAttribute('href');//atribut qui sort l'image
 }
 //  $imgs1 = array_map('get_href',$images1);
 
@@ -53,9 +52,4 @@ $imgs1[] = $image->getAttribute('href');//atribut qui sort l'image
 
 
 $b = array_filter($imgs1,'remove_wrong_link');
-print_r($b[100]);
-}
-for ($i=0; $i <=1000 ; $i++) { 
-    # code...
-    data();
-}
+print_r($b);
