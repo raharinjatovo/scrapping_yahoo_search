@@ -7,15 +7,15 @@ function get_images($data)
 }
 function remove_wrong_link($string)
 {
-    // remove element from yahoo.com url
-    return (!strpos($string, 'yahoo.com') !== FALSE);
+    // get just all youtube
+    return (strpos($string, 'youtube.com') !== FALSE);
 }
 function get_href($data)
 {
     return $data->getAttribute('href');
 }
 
-    $link='https://fr.images.search.yahoo.com/search/images;_ylt=AwrJS5dMFghcBh4AgWpjAQx.;_ylu=X3oDMTE0aDRlcHI2BGNvbG8DaXIyBHBvcwMxBHZ0aWQDQjY1NjlfMQRzZWMDcGl2cw--?p='.urlencode('messi').'&fr2=piv-web&fr=yfp-t-905-s';
+    $link='https://fr.images.search.yahoo.com/search/images;_ylt=AwrJS5dMFghcBh4AgWpjAQx.;_ylu=X3oDMTE0aDRlcHI2BGNvbG8DaXIyBHBvcwMxBHZ0aWQDQjY1NjlfMQRzZWMDcGl2cw--?p='.urlencode('bruno mars youtube').'&fr2=piv-web&fr=yfp-t-905-s';
 
     $html=file_get_contents($link);
 
